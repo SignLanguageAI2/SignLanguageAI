@@ -7,6 +7,7 @@ sudo apt install -y libavcodec-dev libavformat-dev libswscale-dev
 sudo apt install -y libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev
 
 sudo apt install -y x11-apps
+sudo apt install python3-opencv python3-numpy python3-pip
 
 python3 -m venv sign_language_env
 source sign_language_env/bin/activate
