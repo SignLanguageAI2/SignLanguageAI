@@ -1,0 +1,16 @@
+sudo apt install python3 python3-pip python3-venv -y
+
+sudo apt install -y python3-opencv
+sudo apt install -y libgl1-mesa-glx libglib2.0-0 libsm6 libxext6 libxrender-dev libgomp1
+
+sudo apt install -y libavcodec-dev libavformat-dev libswscale-dev
+sudo apt install -y libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev
+
+sudo apt install -y x11-apps
+
+python3 -m venv sign_language_env
+source sign_language_env/bin/activate
+
+pip install --upgrade pip
+
+pip install -r requirements.txt
