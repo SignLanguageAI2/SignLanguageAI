@@ -36,3 +36,21 @@ class SignLanguageDetector:
             # Ici vous pourriez ajouter l'entraînement avec un dataset
             print("Modèle créé. Entraînement nécessaire avec un dataset.")
 
+    def create_model(self):
+        """Crée un modèle simple"""
+        model = keras.Sequential([
+            keras.layers.Dense(128, activation='relu', input_shape=(63,)),
+            keras.layers.Dropout(0.3),
+            keras.layers.Dense(64, activation='relu'),
+            keras.layers.Dropout(0.3),
+            keras.layers.Dense(32, activation='relu'),
+            keras.layers.Dense(len(self.labels), activation='softmax')
+        ])
+        
+        model.compile(
+            optimizer='adam',
+            loss='sparse_categorical_crossentropy',
+            metrics=['accuracy']
+        )
+        return model
+
